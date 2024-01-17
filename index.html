@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What AM I?</title>
+    <link rel="shortcut icon" type="image/png" href="image/bird.png"/>
+    <style>
+        body{
+            background-color: #6273f3;
+        }
+        
+        /* info button design */
+
+        
+        #info-btn {
+            align-items: center;
+            appearance: none;
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "JetBrains Mono",monospace;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s,transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow,transform;
+            font-size: 18px;
+          }
+          
+          #info-btn:focus {
+            box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+          }
+          
+          #info-btn:hover {
+            box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+            transform: translateY(-2px);
+          }
+          
+          #info-btn:active {
+            box-shadow: #3c4fe0 0 3px 7px inset;
+            transform: translateY(2px);
+          }
+
+          /*Maintainer text*/
+          #maintainer-text {
+            margin-left: 1250px;
+            margin-bottom: 20px;
+        
+        }
+                    
+        
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    
+    
+</head>
+<body>
+    <div id = "info"><button id="info-btn"><strong>Info</strong></button></div>
+    <div id = "maintainer-text"><a href="https://github.com/Ifeanyi55" target="_blank" style="text-decoration: none;color:#05265e;font-size:medium;"><strong>Maintainer</strong></a></div>
+    <script
+	type="module"
+	src="https://gradio.s3-us-west-2.amazonaws.com/4.13.0/gradio.js"></script>
+
+    <gradio-app src="https://ifeanyi-tellme-ai.hf.space"></gradio-app>
+
+    <script>
+        // generating info alert
+    function infoAlert(){
+        Swal.fire({title:"Upload a photo, click 'Submit', and AI will classify the image in the photo. <br><br>Try an example below! &#128512;",
+        timer: 10000});
+    }
+        // create 
+        const info = document.getElementById("info-btn");
+        info.addEventListener("click", infoAlert);
+    </script>
+
+</body>
+
+
+</html>
