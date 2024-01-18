@@ -4,4 +4,4 @@ When you load the [application](https://what-am-i.netlify.app/), make sure to cl
 
 
 
-[![image file](screenshot.jpg)](https://what-am-i.netlify.app/)
+![image file](screenshot.jpg)
